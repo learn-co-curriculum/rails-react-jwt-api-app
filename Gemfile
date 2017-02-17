@@ -21,6 +21,8 @@ gem 'active_model_serializers', '~> 0.10.0'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# use for server side authentication 
+gem 'jwt', '~> 1.5.6'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
