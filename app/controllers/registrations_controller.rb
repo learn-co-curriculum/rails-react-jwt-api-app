@@ -3,7 +3,14 @@ class RegistrationsController < ApplicationController
   def signup 
     user = User.new(user_params)
     if user.save 
-      render json: user 
+      render json: { 
+        profile: {
+          full_name: user.full_name, 
+          email: user.email,
+          username: user.username
+        }, 
+        token: Auth.create_token(user.id) 
+      }
     else 
       render json: user.errors.full_messages 
     end
